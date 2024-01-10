@@ -20,12 +20,12 @@ Adobe CMap resources are covered by their own copyright but the same license:
 
 See https://github.com/adobe-type-tools/cmap-resources
 -->
-<html dir="ltr" mozdisallowselectionprint>
+<html dir="ltr" lang="en" mozdisallowselectionprint>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="google" content="notranslate">
-    <title>PDF.js viewer</title>
+    <title data-l10n-id="title_label">PDF.js viewer</title>
 
 <!-- This snippet is used in production (included from viewer.html) -->
 <link rel="resource" type="application/l10n" href="locale/locale.properties">
@@ -37,6 +37,8 @@ See https://github.com/adobe-type-tools/cmap-resources
   </head>
 
   <body tabindex="1">
+    <a href="#viewer" class="skipNav" data-l10n-id="skip_to_content">Skip to PDF content</a>
+    <h1 class="visuallyHidden" data-l10n-id="title_label">PDF.js viewer</h1>
     <div id="outerContainer">
 
       <div id="sidebarContainer">
@@ -283,7 +285,8 @@ See https://github.com/adobe-type-tools/cmap-resources
 
                 <div class="verticalToolbarSeparator hiddenMediumView"></div>
 
-                <div id="editorModeButtons" class="splitToolbarButton toggled" role="radiogroup">
+                <div id="editorModeButtons" class="splitToolbarButton toggled" role="radiogroup" aria-labelledby="editorModeLabel">
+                  <span class="visuallyHidden" data-l10n-id="editor_mode_label" id="editorModeLabel">Select Editor Mode</span>
                   <button id="editorFreeText" class="toolbarButton" disabled="disabled" title="Text" role="radio" aria-checked="false" aria-controls="editorFreeTextParamsToolbar" tabindex="34" data-l10n-id="editor_free_text2">
                     <span data-l10n-id="editor_free_text2_label">Text</span>
                   </button>

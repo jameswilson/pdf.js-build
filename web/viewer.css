@@ -25,6 +25,41 @@
   }
 }
 
+.visuallyHidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skipNav {
+  position: absolute;
+  left: -10000px;
+  z-index: 10000; /* show above toolbar */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skipNav:focus,
+.skipNav:focus-visible,
+.skipNav:active {
+  display: block;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--main-color);
+  background: var(--body-bg-color);
+  font: message-box;
+}
+
 .textLayer {
   position: absolute;
   text-align: initial;
